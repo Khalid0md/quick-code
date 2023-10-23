@@ -22,7 +22,7 @@ greet(b);
 
 % arrays
 x = [1, 2, 3];
-x1 = zeros[3]
+x1 = zeros(3)
 
 % matrices as 2D arrays
 A = zeros(3, 3);
