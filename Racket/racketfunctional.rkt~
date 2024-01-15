@@ -1,0 +1,21 @@
+#lang racket
+;fileIO and functional
+(define (ispalindrome string)
+    (define len (- (string-length string) 1))
+    (define (check n)
+        (cond 
+            [(and (>= n (floor (/ len 2))) (odd? len)) true]
+            [(and (>= n (floor (/ len 2))) (char=? (string-ref string n) (string-ref string (+ n 1)))) true]
+            [(not (char=? (string-ref string n)  (string-ref string (- (- len n) 1)))) false]
+            [check (+ n 1)]
+        )
+    )
+    (check 0)
+)
+
+(ispalindrome "")
+(ispalindrome "racar")
+(ispalindrome "raccar")
+(ispalindrome "racnar")
+
+

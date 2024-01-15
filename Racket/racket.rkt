@@ -12,17 +12,17 @@
 (define first-element (car number-list)) ; Gets the first element (1)
 (define rest-of-list (cdr number-list))   ; Gets the rest of the list (list 2 3 4 5)
 
-(define fruits (list 'apple 'banana))
+(define fruits (list 'apple 'banana)) ;?apostrophe before apple?
 (define more-fruits (list 'cherry 'date))
 
 ; Add an element to the beginning of a list
-(define new-list (cons 'kiwi fruits)) ; (kiwi apple banana)
+(define new-list (cons 'kiwi fruits)) ; (kiwi apple banana) ;(cons item list)
 
 ; Concatenate two lists
 (define all-fruits (append fruits more-fruits)) ; (apple banana cherry date)
 
 ; Reverse a list
-(define reversed-fruits (reverse all-fruits)) ; (date cherry banana apple)
+(define reversed-fruits (reverse all-fruits)) ; (date cherry banana apple) ;cons adds to beginning. must reverse at the end!
 
 (define numbers (list 1 2 3 4 5))
 
@@ -32,7 +32,7 @@
 ; Filter: Create a new list with elements meeting a condition
 (define even-numbers (filter even? numbers)) ; (2 4)
 
-(define fruits (list 'apple 'banana 'cherry))
+(define fruits (list 'apple 'banana 'cherry)) ;? what is the apostrophe
 
 ; Check length
 (define num-fruits (length fruits)) ; 3
@@ -41,7 +41,7 @@
 (define is-empty? (empty? '())) ; #t (true)
 
 ;Get 3rd element (0-indexed)
-(define third (list-ref number-list 3)) 
+(define third (list-ref number-list 2)) 
 (print third)
 
 

@@ -7,5 +7,5 @@ if (true && true) {
 }
 
 factors = []
-factors[] = 1
+factors[factors.length] = 1
 console.log(factors)
